@@ -58,7 +58,7 @@
                     <h1 class="font-semibold text-5xl my-5">Kitchenware</h1>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                         <!-- card 1 -->
-                        <div onclick="accessoriesName1()" class="card card-compact  shadow-xl p-5 hover:border-4">
+                        <div onclick="productPurchaseList1()" class="card card-compact  shadow-xl p-5 hover:border-4">
                             <figure class="bg-slate-100 py-7">
                                 <img src="./images/prod1.png" alt="K. Accessories" />
                             </figure>
@@ -73,8 +73,8 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
-                                <h2 id="accessories-name" class="card-title font-semibold text-xl">K1. Accessories</h2>
-                                <p class="text-xl text-slate-600"><span id="product1-Prices">39.00 </span> TK</p>
+                                <h2 id="product1-name" class="card-title font-semibold text-xl">K1. Accessories</h2>
+                                <p id="product1-prices" class="text-xl text-slate-600"><span id="product1-Prices">39.00 </span> TK</p>
                             </div>
                         </div>
                         <!-- card 2 -->
@@ -258,8 +258,8 @@
                 <div class=" shadow-md p-5 rounded-md">
                     <h2 class="font-medium text-2xl my-3">Have coupon?</h2>
                     <div  class="flex  border-4 bg-[#E527B2] rounded-lg h-14">
-                        <input id="coupon-code" type="text" placeholder="Coupon code" class="bg-white px-2 w-9/12" />
-                        <button class=" text-white font-semibold text-2xl px-2">Apply</button>
+                        <input id="coupon-code" name="coupon" type="text" placeholder="Coupon code" class="bg-white px-2 w-9/12" />
+                        <button id="coupon-code-btn" name="coupon" class=" text-white font-semibold text-2xl px-2">Apply</button>
                     </div>
 
                 </div>
@@ -273,13 +273,13 @@
 
                     <div class="border-t-2 border-b-2 py-4 my-4">
                         <h3>Total price: <span class=" text-slate-400"><span id="total-prices">00</span>TK</span></h3>
-                        <h3>Discount : <span class=" text-slate-400"><span>00</span>TK</span></h3>
-                        <h3>Total: <span class=" text-slate-400"><span>00</span>TK</span></h3>
+                        <h3>Discount : <span class=" text-slate-400"><span id="discount-prices">00</span>TK</span></h3>
+                        <h3>Total Pay: <span class=" text-slate-400"><span id="total-pay">00</span>TK</span></h3>
                     </div>
 
                 </div>
                 <div class=" flex justify-center">
-                    <button class="bg-[#E527B2] rounded-lg text-white font-semibold text-xl h-14 w-10/12 -mt-7">
+                    <button id="purchase-btn" class="bg-[#E527B2] rounded-lg text-white font-semibold text-xl h-14 w-10/12 -mt-7">
                         Make Purchase</button>
 
                 </div>
