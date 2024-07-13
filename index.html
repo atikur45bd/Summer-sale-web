@@ -74,7 +74,8 @@
                                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                                 </div>
                                 <h2 id="product1-name" class="card-title font-semibold text-xl">K1. Accessories</h2>
-                                <p id="product1-prices" class="text-xl text-slate-600"><span id="product1-Prices">39.00 </span> TK</p>
+                                <p id="product1-prices" class="text-xl text-slate-600"><span id="product1-Prices">39.00
+                                    </span> TK</p>
                             </div>
                         </div>
                         <!-- card 2 -->
@@ -98,7 +99,7 @@
                             </div>
                         </div>
                         <!-- card 3 -->
-                        <div onclick="productPurchaseList3()"  class="card card-compact  shadow-xl p-5 hover:border-4">
+                        <div onclick="productPurchaseList3()" class="card card-compact  shadow-xl p-5 hover:border-4">
                             <figure class="bg-slate-100 py-7">
                                 <img src="./images/prod3.png " alt="K. Accessories" />
                             </figure>
@@ -124,7 +125,7 @@
                     <h1 class="font-semibold text-5xl my-5">Sportswear</h1>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
                         <!-- card 1 -->
-                        <div onclick="productPurchaseList4()"  class="card card-compact  shadow-xl p-5 hover:border-4">
+                        <div onclick="productPurchaseList4()" class="card card-compact  shadow-xl p-5 hover:border-4">
                             <figure class="bg-slate-100 py-7">
                                 <img src="./images/prod4.png" alt="Sports Back Cap" />
                             </figure>
@@ -257,9 +258,11 @@
                 <!-- coupon container  -->
                 <div class=" shadow-md p-5 rounded-md">
                     <h2 class="font-medium text-2xl my-3">Have coupon?</h2>
-                    <div  class="flex  border-4 bg-[#E527B2] rounded-lg h-14">
-                        <input id="coupon-code" name="coupon" type="text" placeholder="Coupon code" class="bg-white px-2 w-9/12" />
-                        <button id="coupon-code-btn" name="coupon" class=" text-white font-semibold text-2xl px-2">Apply</button>
+                    <div class="flex  border-4 bg-[#E527B2] rounded-lg h-14">
+                        <input id="coupon-code" name="coupon" type="text" placeholder="Coupon code"
+                            class="bg-white px-2 w-9/12" />
+                        <button id="coupon-code-btn" name="coupon"
+                            class=" text-white font-semibold text-2xl px-2">Apply</button>
                     </div>
 
                 </div>
@@ -279,12 +282,29 @@
 
                 </div>
                 <div class=" flex justify-center">
-                    <button id="purchase-btn" class="bg-[#E527B2] rounded-lg text-white font-semibold text-xl h-14 w-10/12 -mt-7">
+                    <button id="purchase-btn"
+                        class="bg-[#E527B2] rounded-lg text-white font-semibold text-xl h-14 w-10/12 -mt-7 hover:border-2">
                         Make Purchase</button>
 
                 </div>
             </div>
+            <!-- after clicking Purchase pop up box -->
+
+
         </section>
+        <div id="purchase-pop-up" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50">
+            <div class=" size-9/12 lg:size-[600px] bg-white rounded-lg flex flex-col items-center justify-center">
+                <img src="./images/congo.png" alt="">
+                <h2 class="font-bold text-xl lg:text-5xl">Congratulations</h2>
+                <p class="lg:text-xl my-8 text-slate-400">Your Purchase the product</p>
+                <a href="" id="go-home-btn"><button
+                        class="bg-[#E527B2] rounded-lg px-8 text-white font-semibold text-xl h-14 hover:border-2">Go
+                        Home</button></a>
+            </div>
+
+
+        </div>
+
     </main>
     <script src="./js/order.js"></script>
 </body>

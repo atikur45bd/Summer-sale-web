@@ -2,6 +2,14 @@
 const couponCode = document.getElementById('coupon-code');
 couponCode.disabled = true;
 
+// Purchase button disable initially
+const purchaseBtn = document.getElementById('purchase-btn');
+purchaseBtn.disabled = true;
+
+const purchasePopUp= document.getElementById('purchase-pop-up');
+const goHomeBtn = document.getElementById('go-home-btn');
+
+
 // Add event listener for the coupon code button only once
 document.getElementById('coupon-code-btn').addEventListener('click', function () {
     const couponCode = document.getElementById('coupon-code');
@@ -60,12 +68,19 @@ function productPurchase(nameId, productPricesId) {
     totalPay.innerText = TotalPrices.toFixed(2);
 
     // Enable or disable purchase button based on total prices
-    const purchaseBtn = document.getElementById('purchase-btn');
     purchaseBtn.disabled = TotalPrices <= 0;
 
     // Enable coupon code button if total prices exceed 200
     couponCode.disabled = TotalPrices < 200;
 }
+// show pop up congratulation box after purchasing product 
+purchaseBtn.addEventListener('click', function() {
+    purchasePopUp.classList.remove('hidden');
+});
+
+goHomeBtn.addEventListener('click', function() {
+    purchasePopUp.classList.add('hidden');
+});
 
 // Functions to handle product purchases
 function productPurchaseList1() {
